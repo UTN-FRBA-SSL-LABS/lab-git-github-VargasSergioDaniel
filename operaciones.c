@@ -8,13 +8,13 @@ int sumar(const int a, const int b) {
 
 /* ── restar — ya implementada ────────────────────────────────────────────── */
 
-int restar(int a, int b) {
+int restar(const int a, const int b) {
     return a - b;
 }
 
 /* ── multiplicar — implementar en feature/mi-funcion ─────────────────────── */
 /*Esta funcion me devuelve el producto de 2 numeros enteros*/
-int multiplicar(int a, int b) {
+int multiplicar(const int a, const int b) {
     return a * b; /* TODO: implementar */
 }
 
