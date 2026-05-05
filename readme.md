@@ -11,6 +11,15 @@ Git resuelve exactamente eso. Pero Git no es solo un "backup con historial": es 
 
 Este laboratorio simula el flujo de trabajo que vas a encontrar en equipos profesionales: ramas de trabajo, pull requests, revisión de código y resolución de conflictos.
 
+# Laboratorio: Git y GitHub
+
+**Nombre:** Sergio Vargas
+**Compañero/a:** ___________________________
+
+---
+
+## Antes de empezar
+
 ### Herramientas necesarias
 
 - **Git** instalado localmente
@@ -289,6 +298,10 @@ d) Porque GitHub Classroom lo requiere para la corrección automática
 ```
 RESPUESTA_P1=b
 ```
+```
+PARTE_I_COMPLETA=SI
+```
+_(escribí SI cuando el PR esté mergeado)_
 
 ---
 
@@ -416,6 +429,10 @@ d) Pedirle al owner que mergee igual y hacer el fix en un PR separado
 ```
 RESPUESTA_P2=b
 ```
+```
+PARTE_II_COMPLETA=SI
+```
+_(escribí SI cuando el PR del compañero esté aprobado y mergeado)_
 
 ---
 
@@ -424,6 +441,7 @@ RESPUESTA_P2=b
 En el día a día es común commitear algo que no debería estar: código de prueba, un debug print, o directamente un bug. Git permite deshacerlo de forma segura.
 
 La clave está en entender que cuando trabajás en un repositorio compartido, **el historial es compartido**. Si vos pusheaste un commit y otros miembros del equipo ya descargaron esos cambios, modificar el historial de forma destructiva (borrando o reescribiendo commits) causa problemas para todos ellos: sus repos quedan en un estado inconsistente con el remoto. Por eso existe `git revert`.
+En el día a día es común commitear algo que no debería estar. Git permite deshacerlo sin borrar la historia.
 
 Antes de arrancar, asegurate de estar en `main`:
 
@@ -497,6 +515,14 @@ d) Porque GitHub bloquea automáticamente los push después de un `git reset --h
 ```
 RESPUESTA_P3=c
 ```
+**P1** — ¿Por qué `git revert` es preferible a `git reset --hard` cuando ya hiciste push de los cambios?
+
+> R: Porque no reescribe el historial de commits, preservando la integridad del repositorio compartido y evitando conflictos para otros desarrolladores. 
+
+```
+PARTE_III_COMPLETA=SI
+```
+_(escribí SI cuando el revert esté pusheado)_
 
 ---
 
@@ -571,11 +597,8 @@ Abrí `operaciones.c`. Vas a ver algo así:
 
 ```c
 int esPar(int n) {
-<<<<<<< HEAD
     return (n % 2) == 0; /* version main */
-=======
     return (n & 1) == 0;
->>>>>>> origin/feature/conflicto-demo
 }
 ```
 
@@ -627,8 +650,13 @@ c) `(n & 1) == 0` no funciona con números negativos en ningún compilador C est
 d) No hay ninguna diferencia; el compilador genera exactamente el mismo código para ambas
 
 ```
-RESPUESTA_P4=
+RESPUESTA_P4=b
 ```
+
+```
+PARTE_IV_COMPLETA=SI
+```
+_(escribí SI cuando el conflicto esté resuelto y pusheado)_
 
 ---
 
@@ -645,7 +673,7 @@ c) Si hay que revertir un cambio puntual es imposible sin deshacer todo lo del d
 d) Git rechaza commits que modifiquen demasiados archivos al mismo tiempo
 
 ```
-RESPUESTA_P5=
+RESPUESTA_P5=c
 ```
 
 ---
@@ -661,7 +689,7 @@ c) `git fetch` solo descarga la branch actual; `git pull` descarga todas las bra
 d) `git pull` siempre pide confirmación antes de modificar archivos locales; `git fetch` no
 
 ```
-RESPUESTA_P6=
+RESPUESTA_P6=b
 ```
 
 ---
@@ -677,7 +705,7 @@ c) Qué problema resuelve o qué funcionalidad agrega, cómo se verificó que fu
 d) El tiempo que tardó en implementarse y el nombre del autor
 
 ```
-RESPUESTA_P7=
+RESPUESTA_P7=c
 ```
 
 ---
